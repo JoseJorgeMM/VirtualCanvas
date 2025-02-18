@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Powered Virtual Canvas Pro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dev-info">
+    <span class="dev-title">AI-Powered Virtual Canvas Pro</span>
+    <span class="dev-name">Professor Jose Jorge M.M</span>
+  </div>
+
+  <div class="instructions">
+    <div class="instruction-line">
+      <span>Extend your thumb to activate drawing mode</span>
+      <span class="instruction-emoji">🖐️</span>
+    </div>
+    <div class="instruction-line">
+      <span>Keep your thumb down to enable navigation mode</span>
+      <span class="instruction-emoji"> ☝️</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="toolbar">
+      <div class="camera-controls">
+        <button id="start-camera" class="tool-btn">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/>
+            <path d="M20 4h-3.17L15 2H9L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h4.05l1.83-2h4.24l1.83 2H20v12z"/>
+          </svg>
+          <span>Start Camera</span>
+        </button>
+        <button id="stop-camera" class="tool-btn" disabled>
+          <svg viewBox="0 0 24 24">
+            <path d="M6 6h12v12H6z"/>
+          </svg>
+          <span>Stop Camera</span>
+        </button>
+        <button id="clear" class="tool-btn">Clear</button>
+        <button id="toggle-grid" class="tool-btn">
+          <svg viewBox="0 0 24 24">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM8 20H4v-4h4v4zm0-6H4v-4h4v4zm0-6H4V4h4v4zm6 12h-4v-4h4v4zm0-6h-4v-4h4v4zm0-6h-4V4h4v4zm6 12h-4v-4h4v4zm0-6h-4v-4h4v4zm0-6h-4V4h4v4z"/>
+          </svg>
+          <span>Grid</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="canvas-container">
+      <video id="video" playsinline></video>
+      <canvas id="canvas"></canvas>
+      <canvas id="drawing-canvas"></canvas>
+    </div>
+
+    <div class="status">
+      <div id="mode-indicator">Mode: Camera off</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
